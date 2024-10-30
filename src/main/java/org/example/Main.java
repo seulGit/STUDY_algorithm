@@ -33,7 +33,7 @@ public class Main {
 
         int site        = 'p';
         int fileNumber  = 1;
-        int launcher    = 1;
+        int launcher    = 3;
 
         printSolution(site, fileNumber, launcher);
     }
