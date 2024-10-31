@@ -27,28 +27,37 @@ public class Main {
     public static void main(String[] args) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         /**
          * site         = b : backjoon / p : programmers
-         * fileNumber   = 1, 2, 3, 4, ....
+         * levelNumber  = 0, 1, 2, ....
+         * fileNumber   = 1, 2, 3, ....
          * launcher     = 1 : main / 2 : test
          */
 
         int site        = 'p';
+        int levelNumber = 0;
         int fileNumber  = 1;
         int launcher    = 3;
 
-        printSolution(site, fileNumber, launcher);
+        printSolution(site, levelNumber, fileNumber, launcher);
     }
 
-    private static void printSolution(int site, int fileNumber, int launcher) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        String str = "";
+    private static void printSolution(int site, int levelNumber, int fileNumber, int launcher) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        StringBuilder temp = new StringBuilder();
 
-
+        // 백준 or 프로그래머스 구분
         if (site == 'b') {
-            str = String.format("backjoon.Test%02d", fileNumber);
+            temp.append("backjoon");
         } else if (site == 'p') {
-            str = String.format("programmers.Test%02d", fileNumber);
+            temp.append("programmers");
         }
 
-        Class<?> clazz = Class.forName("org.example." + str);
-        clazz.getDeclaredConstructor(int.class).newInstance(launcher);
+        // 클래스 경로 조합
+        temp.append(String.format(".level%d.Test%02d", levelNumber, fileNumber));
+
+        try {
+            Class<?> clazz = Class.forName("org.example." + temp);
+            clazz.getDeclaredConstructor(int.class).newInstance(launcher);
+        } catch (Exception e) {
+            System.out.println("존재하지 않는 클래스입니다. 설정값을 확인하세요!");
+        }
     }
 }
