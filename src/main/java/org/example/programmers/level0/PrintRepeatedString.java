@@ -16,8 +16,6 @@ import java.util.Random;
  */
 public class PrintRepeatedString {
 
-    // 확장가능성이나 재사용성 없으므로 간결하게 코드 작성
-
     public static void main(String[] args) {
         PrintRepeatedString printRepeatedString = new PrintRepeatedString();
         printRepeatedString.solution();
