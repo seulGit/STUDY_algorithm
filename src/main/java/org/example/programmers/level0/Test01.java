@@ -4,6 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Test01 {
+    // 24.10.31 - 문제별로 클래스를 나누기로 결정. 본 파일은 기록용으로 남겨둔다. 최상위 Main 클래스에서 실행시키면 됨.
     /**
      * 문제 1 : 주어진 코드는 변수에 데이터를 저장하고 출력하는 코드입니다.
      * 아래와 같이 출력되도록 빈칸을 채워 코드를 완성해 주세요.
@@ -25,6 +26,17 @@ public class Test01 {
      * 출력 예시 :
      * a = 4
      * b = 5
+     *
+     * ===============================================================
+     *
+     * 문제 3 : 문자열 str과 정수 n이 주어집니다.
+     * str이 n번 반복된 문자열을 만들어 출력하는 코드를 작성해 보세요.
+     *
+     * 입력 예시 :
+     * string 5
+     *
+     * 출력 예시 :
+     * stringstringstringstringstring
      *
      */
     public Test01(int launcher) {

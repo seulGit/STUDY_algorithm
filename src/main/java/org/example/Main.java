@@ -14,16 +14,17 @@ import java.lang.reflect.InvocationTargetException;
  * 02.
  *
  * site 1 : programmers
- * 01.
- * 02.
- *
- *
- *
+ * 01.문자열 출력
+ * 02.정수 출력
+ * 03.문자열 반복 출력
  *
  *
  */
 
 public class Main {
+
+    // 24.10.31 : 문제별로 클래스 나누기로 결정. 본 클래스는 테스트용으로 그냥 둔다.
+
     public static void main(String[] args) throws ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         /**
          * site         = b : backjoon / p : programmers
