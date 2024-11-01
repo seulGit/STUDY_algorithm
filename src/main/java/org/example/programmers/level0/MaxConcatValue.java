@@ -27,6 +27,7 @@ public class MaxConcatValue {
 
     public static void main(String[] args) {
         maxConcatValue.solution1(3, 85);
+        maxConcatValue.solution1(9, 23);
         maxConcatValue.solution2(3, 85);
     }
 
@@ -35,8 +36,9 @@ public class MaxConcatValue {
 
         int answer = 0;
 
-        int ab = Integer.parseInt(String.valueOf(a) + String.valueOf(b));
-        int ba = Integer.parseInt(String.valueOf(b) + String.valueOf(a));
+        // + 연산자가 문자열과 숫자(또는 다른 타입)를 만날 때 자동으로 숫자를 문자열로 변환하여 이어 붙인다!
+        int ab = Integer.parseInt(String.valueOf(a) + b);
+        int ba = Integer.parseInt(String.valueOf(b) + a);
 
         if (ab > ba) {
             answer = ab;
