@@ -1,7 +1,5 @@
 package org.example.programmers.level0;
 
-import org.example.utils.ExecutionTimeUtil;
-
 import java.util.stream.IntStream;
 
 import static org.example.utils.ExecutionTimeUtil.measureTime;
@@ -60,30 +58,30 @@ public class ArithmeticSequenceSum {
     static ArithmeticSequenceSum arithmeticSequenceSum = new ArithmeticSequenceSum();
 
     public static void main(String[] args) {
-        ExecutionTimeUtil.measureTime(() -> {
+        measureTime(() -> {
             arithmeticSequenceSum.solution1(3, 4, new boolean[]{true, false, false, true, true});
         });
 
-        ExecutionTimeUtil.measureTime(() -> {
+        measureTime(() -> {
             arithmeticSequenceSum.solution1_opt(3, 4, new boolean[]{true, false, false, true, true});
         });
 
-        ExecutionTimeUtil.measureTime(() -> {
+        measureTime(() -> {
             arithmeticSequenceSum.solution2(3, 4, new boolean[]{true, false, false, true, true});
         });
 
         System.out.println("*****************************");
         System.out.println("");
 
-        ExecutionTimeUtil.measureTime(() -> {
+        measureTime(() -> {
             arithmeticSequenceSum.solution1(7, 1, new boolean[]{false, false, false, true, false, false, false});
         });
 
-        ExecutionTimeUtil.measureTime(() -> {
+        measureTime(() -> {
             arithmeticSequenceSum.solution1_opt(7, 1, new boolean[]{false, false, false, true, false, false, false});
         });
 
-        ExecutionTimeUtil.measureTime(() -> {
+        measureTime(() -> {
             arithmeticSequenceSum.solution2(7, 1, new boolean[]{false, false, false, true, false, false, false});
         });
     }
