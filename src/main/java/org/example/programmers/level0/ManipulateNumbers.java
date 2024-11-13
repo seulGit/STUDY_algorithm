@@ -42,8 +42,6 @@ public class ManipulateNumbers {
             sb.append((numLog[i] > numLog[i - 1]) ? ((numLog[i] - numLog[i - 1] == 1) ? "w" : "d") : ((numLog[i] - numLog[i - 1] == -1) ? "s" : "a"));
         }
 
-
-
         System.out.println(sb);
     }
 
