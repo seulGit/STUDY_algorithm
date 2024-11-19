@@ -3,6 +3,7 @@ package org.example.programmers.level0;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 /**
  *
@@ -41,6 +42,8 @@ public class CollatzSequence {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(collatzSequence.solution1(10)));
         System.out.println(Arrays.toString(collatzSequence.solution1(25)));
+        System.out.println(Arrays.toString(collatzSequence.solution2(10)));
+        System.out.println(Arrays.toString(collatzSequence.solution2(25)));
     }
 
     // solution1
@@ -60,5 +63,13 @@ public class CollatzSequence {
         n = (n % 2 == 0) ? (n / 2) : (3 * n + 1);
 
         return collatz(intArr, n);
+    }
+
+    // solution2
+    private int[] solution2(int n) {
+        return IntStream.concat(
+                        IntStream.iterate(n, i -> i > 1, i -> i % 2 == 0 ? i / 2 : i * 3 + 1),
+                        IntStream.of(1))
+                .toArray();
     }
 }
